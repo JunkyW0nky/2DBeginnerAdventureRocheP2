@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  maxHealth: 5
+  timeInvincible: 2
 --- !u!50 &-7090547296494306183
 Rigidbody2D:
   serializedVersion: 4
@@ -124,9 +126,9 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 0
+  m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8604841480205111249
 BoxCollider2D:
   m_ObjectHideFlags: 0

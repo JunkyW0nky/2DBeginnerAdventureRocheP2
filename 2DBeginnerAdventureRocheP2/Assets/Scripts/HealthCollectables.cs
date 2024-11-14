@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,11 @@ public class HealthCollectables : MonoBehaviour
         SugarLandMovement controller = other.GetComponent<SugarLandMovement>();
         if (controller != null)
         {
-            if(controller.ChangeHealth < controller.maxHealth)
-        }
- 
-        {
-            controller.ChangeHealth(1);
-            Destroy(gameObject);
+            if(controller.health < controller.maxHealth)
+            {
+                controller.ChangeHealth(1);
+                Destroy(gameObject);
+            }
         }
 
     }

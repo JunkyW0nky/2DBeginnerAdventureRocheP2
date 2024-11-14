@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,11 @@ public class DamageZone : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        SugarLandMovement controlller = other.GetComponent<SugarLandMovement>();
+        SugarLandMovement controller = other.GetComponent<SugarLandMovement>();
 
-        if (controlller != null) 
+        if (controller != null)
         {
-            controller
+            controller.ChangeHealth(-1);
+        }
     }
-    
+}
